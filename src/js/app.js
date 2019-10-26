@@ -12,14 +12,14 @@ export default class App extends LitElement {
   cards = ['Josh', 'Apex', 'More Card', 'Test']
 
   addCard(event) {
-    let text = window.prompt('Add a new card') || 'empty text'
+    let text = window.prompt('Add a new card')
     this.cards = [ ...this.cards, text ]
   }
 
   render() {
     return html`
       <div>
-        ${this.cards.map(card => html`<x-card .app=${this} .value=${card}></x-card>`)}
+        ${this.cards.sort().map(card => html`<x-card .app=${this} .value=${card}></x-card>`)}
         <x-card>
           <a href="#" @click=${this.addCard}>Add Card</a>
         </x-card>
