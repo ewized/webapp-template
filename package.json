@@ -18,7 +18,7 @@
     "babel-loader": "^8.0.6",
     "babel-register": "^6.26.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
     "build": "webpack --mode production",
